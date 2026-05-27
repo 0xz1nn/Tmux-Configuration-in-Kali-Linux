@@ -126,6 +126,10 @@ bind c new-window -c "#{pane_current_path}"
 This config unlocks you the two clipboard buffer potential i.e one is your system's clipboard buffer  and the other is tmux's clipboard buffer. The tmux's buffer only works inside the tmux sessions not everywhere.
 
 
+![TMUX copy-paste](tmux-copy-paste.gif)
+
+
+
 - System Clipboard:  
 Use `Shift + Mouse Drag`  & `ctrl + shift + c` to copy text into your host system clipboard.
 
