@@ -122,6 +122,7 @@ bind % split-window -h -c "#{pane_current_path}"
 bind c new-window -c "#{pane_current_path}"
 ```
 
+NOTE : The default bind keys of TMUX is `ctrl + b`. I changed it to `ctrl + a`
 
 This config unlocks you the two clipboard buffer potential i.e one is your system's clipboard buffer  and the other is tmux's clipboard buffer. The tmux's buffer only works inside the tmux sessions not everywhere.
 
@@ -136,6 +137,7 @@ Select the text by dragging the mouse to directly copy into the tmux buffer and 
 
 
 Refer  [Tmux Cheatsheet | Interactive & Modern Guide](https://tmuxcheatsheet.org/) to discover more interesting and useful tmux commands.
+(Edit the bind-keys to `ctrl + a`)
 
 These tutorials helped alot to learn about TMUX. You can refer them too, to explore and learn more about the tmux
 - https://youtu.be/nTqu6w2wc68?si=D7sIm7DC3IA-m6E8
