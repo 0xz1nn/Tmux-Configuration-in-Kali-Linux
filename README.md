@@ -44,6 +44,7 @@ Session: Hacking
 
 and you can create multiple sessions too.
 
+![Tmux-Server](tmux-server.jpeg)
 
 
 ## Debugging My Errors
