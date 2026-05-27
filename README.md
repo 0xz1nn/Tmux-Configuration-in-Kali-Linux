@@ -46,7 +46,7 @@ and you can create multiple sessions too.
 
 
 
-### Debugging My Errors
+## Debugging My Errors
 
 Follow along. You may find this helpful.
 I got few errors while setting up the tmux in my kali.
@@ -63,7 +63,7 @@ I also recommend you to use `bash` shell as default shell for tmux and also `bas
 
 After this setup , you run `zsh` in your kali's default terminal and `bash` shell in your tmux terminal.
 
-### Installing TMUX on Kali Linux
+## Installing TMUX on Kali Linux
 
 
 TMUX is usually pre-installed on Kali.
@@ -80,7 +80,7 @@ sudo apt install tmux
 ```
 
 
-### Setup Your Config File
+## Setup Your Config File
 
 follow the below instructions to configure your tmux 
 
@@ -134,16 +134,9 @@ Select the text by dragging the mouse to directly copy into the tmux buffer and 
 
 ![TMUX copy-paste](tmux-copy-paste.gif)
 
-### Starting TMUX
-
-Start a default session:
-```
-tmux
-```
-
 
 Refer  [Tmux Cheatsheet | Interactive & Modern Guide](https://tmuxcheatsheet.org/) to discover more interesting and useful tmux commands.
 
-You can refer to these two Youtube videos to explore and learn more about the tmux
+These tutorials helped alot to learn about TMUX. You can refer them too, to explore and learn more about the tmux
 - https://youtu.be/nTqu6w2wc68?si=D7sIm7DC3IA-m6E8
 - https://youtu.be/Lqehvpe_djs?si=dEl2Jbqgmmb7835g
