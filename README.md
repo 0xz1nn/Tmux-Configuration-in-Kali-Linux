@@ -32,12 +32,12 @@ Example:
 Session: Hacking
  ├── Window 0 → VPN
  ├── Window 2 → Ports and Services Scanning
-      ├── pane 1 → nmap top 1000 ports
-      ├── pane 2 → nmap full port scan
-      ├── pane 3 → nmap udp port scan 
+ |     ├── pane 1 → nmap top 1000 ports
+ |      ├── pane 2 → nmap full port scan
+ |     ├── pane 3 → nmap udp port scan 
  ├── Window 3 → Directory Enumeration
-      ├── pane 1 → fuzz directory wordlists 
-      ├── pane 2 → fuzz files wordlists 
+ |     ├── pane 1 → fuzz directory wordlists 
+ |    ├── pane 2 → fuzz files wordlists 
  ├── Window 4 → Reverse Shell Listener
  └── Window 5 → Exploit Script Setup
 ```
