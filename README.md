@@ -94,33 +94,108 @@ nano ~/.tmux.conf
 
 paste the below commands your tmux config file (This is my current personal config file).
 
-```
-# enable vim-style selection
+
+'''
+# --------------------------------------------------
+# Clipboard
+# --------------------------------------------------
+
+#bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xclip -selection clipboard -in"
+
 bind-key -T copy-mode-vi v send-keys -X begin-selection
 bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
 
-# default shell
-set -g default-shell /bin/bash
+# --------------------------------------------------
+# Shell
+# --------------------------------------------------
 
-# prefix
+#set -g default-shell /bin/bash
+set -g default-shell /usr/bin/zsh
+# --------------------------------------------------
+# Prefix
+# --------------------------------------------------
+
 set -g prefix C-a
 unbind C-b
 bind C-a send-prefix
 
-# mouse + vi mode
+# --------------------------------------------------
+# Mouse / Copy Mode
+# --------------------------------------------------
+
 set -g mouse on
 setw -g mode-keys vi
 
+# --------------------------------------------------
+# Theme
+# --------------------------------------------------
 
-#scroll back buffer limit
+# Terminal capabilities
+set -g default-terminal "tmux-256color"
+set -as terminal-overrides ',*:Tc'
+
+# Status bar
+set -g status-style bg=#11161C,fg=#C7CDD6
+set -g status-position top
+set -g status-justify centre
+
+# Left
+set -g status-left-length 25
+set -g status-left "#[fg=#FF404D,bold] #S "
+
+# Right
+set -g status-right-length 40
+set -g status-right "#[fg=#FF404D] You can AdD teXt heRe.... "
+
+# Inactive windows
+set -g window-status-format "#[fg=#7A8492,bg=#11161C] #I "
+
+# Active window
+set -g window-status-current-format "#[fg=#0B0D10,bg=#FF404D,bold] #I "
+
+# Space between tabs
+set -g window-status-separator " "
+
+# Pane borders
+set -g pane-border-style fg=#2A313B
+set -g pane-active-border-style fg=#FF404D
+
+# Copy mode
+#set -g mode-style "bg=#FF404D,fg=#0B0D10,bold"
+set -g mode-style "bg=yellow,fg=black,bold"
+# Messages
+set -g message-style bg=#FF404D,fg=#0B0D10
+
+# --------------------------------------------------
+# History
+# --------------------------------------------------
+
 set -g history-limit 100000
 
-# split panes in current directory
-bind '"' split-window -v -c "#{pane_current_path}"
-bind % split-window -h -c "#{pane_current_path}"
+# --------------------------------------------------
+# Logging
+# --------------------------------------------------
 
-# new window in current directory
+run-shell /opt/tmux-logging/logging.tmux
+
+# --------------------------------------------------
+# Windows
+# --------------------------------------------------
+
+set -g automatic-rename on
+
 bind c new-window -c "#{pane_current_path}"
+
+# --------------------------------------------------
+# Splits
+# --------------------------------------------------
+
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+
+unbind '"'
+unbind %
+
 ```
 
 NOTE : The default bind keys of TMUX is `ctrl + b`. I changed it to `ctrl + a`
