@@ -95,7 +95,7 @@ nano ~/.tmux.conf
 paste the below commands your tmux config file (This is my current personal config file).
 
 
-'''
+```
 # --------------------------------------------------
 # Clipboard
 # --------------------------------------------------
