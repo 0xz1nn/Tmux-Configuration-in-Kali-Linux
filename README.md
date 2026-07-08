@@ -2,6 +2,7 @@
 
 Once you get comfortable with TMUX, managing terminals, reverse shells, scans, and workflows becomes significantly faster and cleaner.
 
+
 ## TMUX (Terminal Multiplexer) is a tool that allows you to:
 
 - Run multiple terminal sessions inside one terminal
@@ -60,9 +61,10 @@ the confirmation was, running `zsh -i` inside TMUX caused the session to exit im
 - When I wanted to create a session with tmux in kali, the default shell for tmux is also `zsh`
 - `zsh` shell works fine, but when I needed to detach the tmux session or switch between sessions I lost them.
 
-I also recommend you to use `bash` shell as default shell for tmux and also `bash` shell is stable, working super fine for me.
-
 After this setup , you run `zsh` in your kali's default terminal and `bash` shell in your tmux terminal.
+
+> [!IMPORTANT]
+> I switched back to the `zsh` shell now. So the default TMUX shell would be `zsh`.
 
 ## Installing TMUX on Kali Linux
 
@@ -100,7 +102,6 @@ paste the below commands your tmux config file (This is my current personal conf
 # Clipboard
 # --------------------------------------------------
 
-#bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xclip -selection clipboard -in"
 
 bind-key -T copy-mode-vi v send-keys -X begin-selection
 bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
@@ -198,11 +199,14 @@ unbind %
 
 ```
 
-NOTE : The default bind keys of TMUX is `ctrl + b`. I changed it to `ctrl + a`
+> [!NOTE]
+> The default bind keys of TMUX is `ctrl + b`. I changed it to `ctrl + a` and also for horizontal split `-` and for vertical split `|`.
+ 
 
 This config unlocks you the two clipboard buffer potential i.e one is your system's clipboard buffer  and the other is tmux's clipboard buffer. The tmux's buffer only works inside the tmux sessions not everywhere.
 
-Tip:
+> [!TIP]
+
 - System Clipboard:  
 Use `Shift + Mouse Drag`  & `ctrl + shift + c` to copy text into your host system clipboard.
 
